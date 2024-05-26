@@ -24,7 +24,7 @@
         </div>
         <div id="navigation-content">
             <div class="logo">
-               <a href="theme-particle.html"><img src="images/AK (2).png" alt="logo"></a> 
+               <a href="https://bonobo-portfolio.vercel.app/"><img src="images/AK (2).png" alt="logo"></a> 
             </div>
             <div class="navigation-close">
                 <span class="close-first"></span>
@@ -110,10 +110,10 @@
                         <div class="colors">
                             <ul >
                             <li>
-                                <a href="#0" class="color-red " title="color-red"></a>
+                                <a href="#0" class="color-purple" title="color-purple"></a>
                             </li>
                             <li>
-                                <a href="#0" class="color-purple" title="color-purple"></a>
+                                <a href="#0" class="color-red " title="color-red"></a>
                             </li>
                             <li>
                                 <a href="#0" class="color-malt" title="color-malt"></a>
@@ -171,30 +171,8 @@
          </div>
             <div class="skills-header">
                     My <span class="color"> Skills <img src="./images/skill (2).png" alt=""> </span> 
-            <!-- </div>
-                <div class="image-container skillset-box">
-                    <div class="image-box ">
-                        <img src="./images/C.png" alt="" class="c">
-                        <img src="./images/C++.png" alt="" class="c++">
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-                        alt="javascript" class="javascript"> 
-                        <img src="./images/Python.png" alt="" class="py"> 
-                    </div>
-                    <button class="prev">&#8249;</button>
-                    <button class="next">&#8250;</button>
-                </div>
-                
-                
-                 -->
-                
-                
-                
-                
-                
-                
-                
-                
-                
+            </div>
+
                 <div class="skillset-box" >
                     <div  class="skill-col first-row" >
                         <div class="single-skill-box">
@@ -278,7 +256,7 @@
                     <div class="skill-html skill">
                         <div class="skill-text">
                     <div class="html">
-                        Javascript
+                        Website Development
                     </div>
                         </div>
                     <div class="html-prog wow prog">
@@ -288,56 +266,55 @@
                     <div class="skill-html skill">
                         <div class="skill-text">
                     <div class="html">
-                      React.JS
+                      Open Source Contribution
                     </div>
                         </div>
                     <div class="html-prog wow prog">
-                 <div class="js-progress wow">90%</div>
+                 <div class="js-progress wow">80%</div>
                     </div>
                     </div>
                     <div class="skill-html skill">
                         <div class="skill-text">
                     <div class="html">
-                        TailwindCSS
+                        Data Structures and Algorithms
                     </div>
                         </div>
                     <div class="html-prog wow prog">
-                 <div class="adobe-progress wow">83%</div>
+                 <div class="adobe-progress wow">70%</div>
                     </div>
                     </div>
                     <div class="skill-html skill">
                         <div class="skill-text">
                     <div class="html">
-                        Next.JS
+                        Front-End Development
                     </div>
                         </div>
                     <div class="html-prog wow prog">
-                 <div class="php-progress wow">87%</div>
+                 <div class="php-progress wow">85%</div>
                     </div>
                     </div>
                     <div class="skill-html skill">
                         <div class="skill-text">
                     <div class="html">
-                        JQuery
+                        Back-End Development
                     </div>
                         </div>
                     <div class="html-prog wow prog">
-                 <div class="jquery-progress wow">94%</div>
+                 <div class="jquery-progress wow">95%</div>
                     </div>
                     </div>
                     <div class="skill-html skill">
                         <div class="skill-text">
                     <div class="html">
-                        SEO
+                        DevOps
                     </div>
                         </div>
                     <div class="html-prog wow prog">
-                 <div class="seo-progress wow">84%</div>
+                 <div class="seo-progress wow">50%</div>
                     </div>
                     </div>
                 </div>
             </div>
-            
             <div class="portfolio-header"> <span class="color"> My </span> Portfolio
             <span class ="header-caption"> Some Of My <span class="color"> Works</span></span></div>
              <div id="portfolio-content">
@@ -373,7 +350,7 @@
                     <input type="text" id="subject" placeholder="Subject" class="input-subject">
                     <textarea id ="body" class="input-textarea" placeholder="Message"></textarea>
                     <button type="button" id ="submit" value="send">Submit</button>
-                 </form>
+                </form>
                
              </div>
              <div class="contact-info">
@@ -417,37 +394,39 @@
 
 
     <script>
-        const imageBox = document.querySelector('.image-box');
-const images = document.querySelectorAll('.image-box img');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-let currentIndex = 0;
-let intervalId;
+        const imageBox = document.querySelector('.image-box1');
+        const images = document.querySelectorAll('.image-box1 img');
+        const prevBtn = document.querySelector('.prev1');
+        const nextBtn = document.querySelector('.next1');
+        let currentIndex = 0;
+        let intervalId;
 
-function showImage(index) {
-  imageBox.style.transform = `translateX(-${index * 100}%)`;
-}
+        function showImage(index) {
+        imageBox.style.transform = `translateX(-${index * 100}%)`;
+        }
 
-function nextImage() {
-  currentIndex = (currentIndex + 1) % images.length;
-  showImage(currentIndex);
-}
+        function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+        }
 
-prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  showImage(currentIndex);
-  clearInterval(intervalId);
-  intervalId = setInterval(nextImage, 3000);
-});
+        prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+        clearInterval(intervalId);
+        intervalId = setInterval(nextImage, 3000);
+        });
 
-nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % images.length;
-  showImage(currentIndex);
-  clearInterval(intervalId);
-  intervalId = setInterval(nextImage, 3000);
-});
+        nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+        clearInterval(intervalId);
+        intervalId = setInterval(nextImage, 3000);
+        });
 
-intervalId = setInterval(nextImage, 3000);    </script>
+        intervalId = setInterval(nextImage, 3000);    
+
+</script>
     <script src="js/jquery.min.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/particles.min.js"></script>
